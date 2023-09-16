@@ -2,8 +2,9 @@ import { DefaultTheme } from "styled-components";
 
 const theme: DefaultTheme = {
   fonts: {
-    primary: "Istok Web",
-    secondary: "mplus-1p",
+    primary: "mplus-1p",
+    secondary: "Istok Web",
+    tertiary: "Oxanium",
   },
   colors: {
     mainLight: "#ffffff",
