@@ -55,7 +55,7 @@ const LandingStyled = styled.div`
   .landingpage__lema {
     width: fit-content;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 34px;
     background-color: ${(props) => props.theme.colors.base};
     padding: 10px 50px;
     border-radius: 60px;
@@ -63,7 +63,7 @@ const LandingStyled = styled.div`
   }
 
   .landingpage__button {
-    padding: 0 90px;
+    padding: 0 115px;
   }
 `;
 
