@@ -11,8 +11,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body{
-  padding:10px;
-font-family: "Istok Web";
+font-family: ${(props) => props.theme.fonts.primary};
 }
 ul,
 li {
