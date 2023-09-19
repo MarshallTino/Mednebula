@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import "../../assets/landing.png";
+
 const LandingStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,11 +12,7 @@ const LandingStyled = styled.div`
   padding-top: 50px;
   padding-bottom: 50px;
   color: ${(props) => props.theme.colors.mainLight};
-  background-image: linear-gradient(
-      rgba(0, 113, 188, 0.9),
-      rgba(0, 146, 69, 0.9)
-    ),
-    url("https://img.freepik.com/free-photo/family-forest_1303-4679.jpg?w=996&t=st=1694795143~exp=1694795743~hmac=d8f693382054c38d751455ed5573cbf93294d65732a95479aa3b20fdfba57de2");
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -5,7 +5,8 @@ const ButtonStyled = styled.button`
   background-color: #ffffff;
   font-family: ${(props) => props.theme.fonts.primary};
   font-size: 30px;
-  color: ${(props) => props.theme.colors.mainDark};
+  color: ${(props) => props.theme.colors.mainLight};
+  background-color: ${(props) => props.theme.colors.mainNeutral};
   border-radius: 60px;
 `;
 export default ButtonStyled;
