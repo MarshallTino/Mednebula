@@ -1,10 +1,10 @@
 import React from "react";
 
 import "./App.css";
-import { Landing } from "./components/Landing/Landing";
+import { OurTeam } from "./components/OurTeam/OurTeam";
 
 function App() {
-  return <Landing />;
+  return <OurTeam />;
 }
 
 export default App;
