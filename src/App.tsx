@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import { Landing } from "./components/Landing/Landing";
 import Banner from "./components/Banner/Banner";
-
+import { OurTeam } from "./components/OurTeam/OurTeam";
 function App() {
   return (
     <>
@@ -16,6 +16,9 @@ function App() {
       />
     </>
   );
+
+
+
 }
 
 export default App;
