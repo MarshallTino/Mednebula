@@ -12,6 +12,8 @@ declare module "styled-components" {
       base: string;
       mainDark: string;
       mainNeutral: string;
+      mainNeutralLight: string;
+      mainNeutralDark: string;
     };
   }
 }

@@ -12,6 +12,10 @@ const GlobalStyles = createGlobalStyle`
 
 body{
 font-family: ${(props) => props.theme.fonts.primary};
+background-color: ${(props) => props.theme.colors.mainLight};
+}
+html, body{
+overflow-x: hidden;
 }
 ul,
 li {
