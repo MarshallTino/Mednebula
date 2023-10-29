@@ -1,6 +1,6 @@
 import SolutionItemStyled from './SolutionItemStyled';
 
-interface ItemProps {
+interface  SolutionItemProps {
     image: string;
     title: string;
     description: string;
@@ -10,7 +10,7 @@ export const SolutionItem = ({
     image, 
     title, 
     description 
-}: ItemProps): JSX.Element => {
+}:  SolutionItemProps): JSX.Element => {
     return (
         <SolutionItemStyled>
             <div className="image-container">
@@ -27,3 +27,4 @@ export const SolutionItem = ({
 };
 
 export default SolutionItem;
+export type { SolutionItemProps };

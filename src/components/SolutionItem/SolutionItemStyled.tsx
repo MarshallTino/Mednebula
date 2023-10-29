@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 const SolutionItemStyled = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
+    width: 300px;
+    margin: 20px;
 
     .image-container {
         display: flex;
@@ -16,12 +15,13 @@ const SolutionItemStyled = styled.div`
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        border: 5px solid green;
+        border: 3px solid ${(props) => props.theme.colors.mainNeutral};
+        object-fit: cover;
     }
 
     .title {
         font-size: 1.5rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
     }
 
     .description {
