@@ -41,4 +41,5 @@ button, input {
   }
 
 `;
+
 export default GlobalStyles;
