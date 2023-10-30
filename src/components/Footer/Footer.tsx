@@ -1,7 +1,7 @@
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
 import { TfiYoutube } from 'react-icons/tfi';
-import { FooterContainer,  ContentContainer, LogoContainer, LinksContainer, SocialContainer, Copyright }
-    from './FooterStyled';
+import { FooterContainer, ContentContainer, LogoContainer, LinksContainer, SocialContainer, Copyright } from './FooterStyled';
+
 
 const Footer = (): JSX.Element => {
     return (

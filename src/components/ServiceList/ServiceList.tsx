@@ -10,6 +10,7 @@ const ServiceList = (): JSX.Element => {
       {services.map((service) => (
         <ServiceCard {...service} />
       ))}
+      <div className="services-list__spacer"></div>
     </ServiceListStyled>
   );
 };

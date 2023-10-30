@@ -12,8 +12,8 @@ const SolutionItemStyled = styled.div`
     }
 
     .image {
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
         border: 3px solid ${(props) => props.theme.colors.mainNeutral};
         object-fit: cover;
