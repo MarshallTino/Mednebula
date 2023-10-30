@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import "../../assets/landing.png";
 
 const LandingStyled = styled.div`
   display: flex;
@@ -8,6 +7,7 @@ const LandingStyled = styled.div`
   align-items: center;
   justify-content: space-evenly;
   height: 100vh;
+  width: 100%;
   gap: 20px;
   padding-top: 50px;
   padding-bottom: 50px;

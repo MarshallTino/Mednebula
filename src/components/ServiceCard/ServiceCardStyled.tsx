@@ -1,43 +1,54 @@
 import { styled } from "styled-components";
 
-const ServiceDescriptionStyled = styled.div`
+const ServiceCardStyled = styled.div`
   display: flex;
-
   width: 100%;
   height: 100%;
   min-height: 450px;
-  color: ${(props) => props.theme.colors.mainDark};
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: ${(props) => props.theme.colors.mainLight};
   font-size: 25px;
-  padding: 50px;
   font-family: ${(props) => props.theme.fonts.tertiary};
+  box-shadow: 4px 0px 125px 50px rgba(0, 0, 0, 0.25);
 
-  .servicedescription__container {
+  .service__container {
+    padding: 50px;
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 30px;
   }
 
-  .servicedescription__title {
+  .service__title {
     width: 100%;
     font-size: 50px;
     border-bottom: 8px solid ${(props) => props.theme.colors.mainNeutral};
   }
 
-  .servicedescription__description {
+  .service__description {
     width: 100%;
-    max-width: 60%;
+  }
+
+  .service_image {
+    object-fit: cover;
   }
 
   .white {
+    background-color: #dfdfdf;
     color: ${(props) => props.theme.colors.mainDark};
-    text-align: right;
     align-items: flex-end;
+  }
+  .blue {
+    background: linear-gradient(
+      180deg,
+      #0071bc 0.03%,
+      #0071bc 70.82%,
+      #003a61 99.45%
+    );
+    align-items: flex-start;
   }
 `;
 
-export default ServiceDescriptionStyled;
+export default ServiceCardStyled;

@@ -2,5 +2,6 @@ export interface ServiceStructure {
   color: string;
   title: string;
   description: string;
-  classname: string;
+  imageClassname: string;
+  image: string;
 }
