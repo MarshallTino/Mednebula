@@ -11,7 +11,7 @@ const ServiceCardStyled = styled.div`
   color: ${(props) => props.theme.colors.mainLight};
   font-size: 25px;
   font-family: ${(props) => props.theme.fonts.tertiary};
-  box-shadow: 4px 0px 125px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 0px 125px 50px rgba(0, 0, 0, 0.20);
 
   .service__container {
     padding: 50px;

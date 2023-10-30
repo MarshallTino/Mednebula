@@ -10,10 +10,8 @@ const GlobalStyles = createGlobalStyle`
 
 
 body{
-  padding:10px;
 background-color:#DFDFDF;
 font-family: ${(props) => props.theme.fonts.primary};
-background-color: ${(props) => props.theme.colors.mainLight};
 }
 html, body{
 overflow-x: hidden;
@@ -42,14 +40,6 @@ button, input {
   }
 
   
-.landingpage {
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 113, 188, 0.9) 0.03%,
-      rgba(0, 113, 188, 0.9) 70.82%,
-      rgba(0, 58, 97, 0.9) 99.45%
-    ),
-    url("assets/landing.png"); }
 
 
 `;
