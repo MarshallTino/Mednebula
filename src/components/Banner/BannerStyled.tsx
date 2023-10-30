@@ -20,6 +20,13 @@ const BannerStyled = styled.div<BannerStyledProps>`
   padding-left: 20%;
   padding-right: 20%;
   
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+
+  }
+
   .button {
     display: flex;
     align-items: center;
@@ -29,7 +36,7 @@ const BannerStyled = styled.div<BannerStyledProps>`
   }
 
   .banner__title {
-    font-family: ${(props) => props.theme.fonts.secondary};
+    font-family: ${(props) => props.theme.fonts.primary};
     margin-left: ${props => props.buttonPosition === 'right' ? 'auto' : '0'};
     margin-right: ${props => props.buttonPosition === 'left' ? 'auto' : '0'};
     max-width: 200px;
