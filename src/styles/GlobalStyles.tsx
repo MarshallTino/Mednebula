@@ -13,6 +13,10 @@ body{
   padding:10px;
 background-color:#DFDFDF;
 font-family: ${(props) => props.theme.fonts.primary};
+background-color: ${(props) => props.theme.colors.mainLight};
+}
+html, body{
+overflow-x: hidden;
 }
 ul,
 li {
@@ -49,4 +53,5 @@ button, input {
 
 
 `;
+
 export default GlobalStyles;

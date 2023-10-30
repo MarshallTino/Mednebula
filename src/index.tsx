@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import "typeface-mplus-1p";
 import "@fontsource/istok-web";
-import "@fontsource/oxanium/700.css";
+import "@fontsource/oxanium";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/Theme";
 import GlobalStyles from "./styles/GlobalStyles";

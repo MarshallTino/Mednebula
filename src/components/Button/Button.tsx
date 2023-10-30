@@ -1,7 +1,7 @@
 import ButtonStyled from "./ButtonStyled";
 
 interface ButtonProps {
-  className: string;
+  className?: string;
   text: string | number;
   action?: () => void;
   disabled: boolean;
