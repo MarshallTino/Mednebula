@@ -1,16 +1,19 @@
+import React from "react";
+
 import "./App.css";
 import { Landing } from "./components/Landing/Landing";
+import { solutionsData } from "./Data/solutionsData";
 import Banner from "./components/Banner/Banner";
-import OurTeam from "./components/OurTeam/OurTeam";
-import SolutionsList from "./components/SolutionsList/SolutionsList";
 import Content from "./components/Content/Content";
 import Footer from "./components/Footer/Footer";
-import { solutionsData } from "./data/solutionsData";
-import { teamData } from "./data/teamData";
+import { OurTeam } from "./components/OurTeam/OurTeam";
+import SolutionsList from "./components/SolutionsList/SolutionsList";
+import LandingPage from "./pages/LandingPage";
+
 function App() {
   return (
     <>
-      <Landing />
+      <LandingPage />
       <Content>
         <div className="container">
           <SolutionsList 

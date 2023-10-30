@@ -7,7 +7,8 @@ const ButtonStyled = styled.button.attrs((props) => ({
   background-color: #ffffff;
   font-family: ${(props) => props.theme.fonts.primary};
   font-size: 30px;
-  color: ${(props) => props.theme.colors.mainDark};
+  color: ${(props) => props.theme.colors.mainLight};
+  background-color: ${(props) => props.theme.colors.mainNeutral};
   border-radius: 60px;
 
   /* Estilos adicionales según el className */

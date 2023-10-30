@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-
 const GlobalStyles = createGlobalStyle`
-
 
 *,
 *::before,
@@ -10,7 +8,10 @@ const GlobalStyles = createGlobalStyle`
   margin: 0;
 }
 
+
 body{
+  padding:10px;
+background-color:#DFDFDF;
 font-family: ${(props) => props.theme.fonts.primary};
 background-color: ${(props) => props.theme.colors.mainLight};
 }
@@ -39,6 +40,17 @@ button, input {
     font-size: inherit;
     border: none;
   }
+
+  
+.landingpage {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 113, 188, 0.9) 0.03%,
+      rgba(0, 113, 188, 0.9) 70.82%,
+      rgba(0, 58, 97, 0.9) 99.45%
+    ),
+    url("assets/landing.png"); }
+
 
 `;
 
