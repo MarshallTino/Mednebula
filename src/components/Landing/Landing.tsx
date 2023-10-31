@@ -52,10 +52,10 @@ export const Landing = () => {
       </div>
       <span className="landingpage__texts-container">
         <h2 className="landingpage__subtitle">
-          CONECTAR PARA TRATAR DISCAPACIDADES
+          CONECTARSE PARA TRATAR DISCAPACIDADES
         </h2>
         <h3 className="landingpage__lema">
-          Comienza una nueva etapa dando los pasos correctos
+          Deseamos darte el apoyo que necesitas cuando lo necesitas
         </h3>
       </span>
       <Button
