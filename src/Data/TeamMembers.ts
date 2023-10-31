@@ -1,4 +1,4 @@
-export const teamData = [
+export const TeamMembers = [
     {
         name: "Laureano Nomen",
         role: "CEO",
