@@ -1,4 +1,3 @@
-
 .App {
   text-align: center;
 }
@@ -42,6 +41,14 @@
   margin-right: 80px;
 }
 
+@media (max-width: 768px) {
+  .services-list :nth-child(2),
+  .services-list :nth-child(4) {
+    flex-direction: column-reverse;
+    font-size: 20px;
+  }
+}
+
 .landingpage {
   background-image: linear-gradient(
       180deg,
@@ -49,5 +56,5 @@
       rgba(0, 113, 188, 0.9) 70.82%,
       rgba(0, 58, 97, 0.9) 99.45%
     ),
-    url("assets/landing.png"); }
-
+    url("assets/landing.png");
+}

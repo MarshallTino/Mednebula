@@ -9,13 +9,26 @@ const ServiceListStyled = styled.ul`
   gap: 50px;
   padding-right: 80px;
   padding-left: 80px;
-  padding-bottom: 40px;  
+  padding-bottom: 40px;
   background-color: #ffffff;
-  
-  .services-list__spacer{
+
+  .services-list__spacer {
     margin-top: 20px;
     width: 100%;
-    border-bottom: 2px solid #000000};
+    border-bottom: 2px solid #000000;
+  }
+
+  @media (max-width: 768px) {
+    padding-right: 20px;
+    padding-left: 20px;
+    gap: 20px;
+  }
+  @media (max-width: 768px) {
+    .services-list :nth-child(2),
+    .services-list :nth-child(4) {
+      flex-direction: column-reverse;
+    }
+  }
 `;
 
 export default ServiceListStyled;
