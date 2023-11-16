@@ -22,8 +22,9 @@ width: 100%;
   padding-right: 20%;
   
   @media (max-width: 768px) {
-    flex-direction: column;
-    height: auto;
+    flex-direction: column-reverse;
+    justify-content: center;
+    //height: auto;
     padding: 20px;
 
   }
@@ -32,17 +33,22 @@ width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: ${props => props.buttonPosition === 'left' ? 'auto' : '0'};
-    margin-right: ${props => props.buttonPosition === 'right' ? 'auto' : '0'};
+    @media (min-width: 768px) {
+      margin-left: ${props => props.buttonPosition === 'left' ? 'auto' : '0'};
+      margin-right: ${props => props.buttonPosition === 'right' ? 'auto' : '0'};
+    }
   }
 
   .banner__title {
     font-family: ${(props) => props.theme.fonts.primary};
-    margin-left: ${props => props.buttonPosition === 'right' ? 'auto' : '0'};
-    margin-right: ${props => props.buttonPosition === 'left' ? 'auto' : '0'};
+    @media (min-width: 768px) {
+      margin-left: ${props => props.buttonPosition === 'right' ? 'auto' : '0'};
+      margin-right: ${props => props.buttonPosition === 'left' ? 'auto' : '0'};
+    }
     max-width: 200px;
     font-size: 30px;
     color: #fff;
   }
 `;
 export default BannerStyled;
+
