@@ -1,56 +1,56 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-width: 100%;
-    
+  width: 100%;
 `;
 
 export const ContentContainer = styled.div`
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     padding: 65px;
+  }
 `;
 
 export const LogoContainer = styled.div`
-    flex: 1;
-    .logo__text {
-        color: ${(props) => props.theme.colors.base};
-    }
+  .logo__text {
+    color: ${(props) => props.theme.colors.base};
+  }
 `;
 
 export const LinksContainer = styled.div`
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
 
-    a {
-        margin: 0 10px;
-        color: ${(props) => props.theme.colors.mainDark};
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: bold;
-    }
+  a {
+    font-weight: bold;      
+    margin: 0 10px;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin: 0;
+  }
 `;
 
 export const SocialContainer = styled.div`
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    a {
-        margin-left: 10px;
-        color: ${(props) => props.theme.colors.mainDark};
-        font-size: 30px;
-    }
+  a {
+    margin: 0 10px;
+    font-size: 30px;
+  }
 `;
 
 export const Copyright = styled.div`
-    background: linear-gradient(${(props) => props.theme.colors.base}, #00558D);
-    color: ${(props) => props.theme.colors.mainLight};
-    font-size: 12px;
-    text-align: center;
-    padding: 20px;
+  background: linear-gradient(${(props) => props.theme.colors.base}, #00558D);
+  color: ${(props) => props.theme.colors.mainLight};
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
 `;
