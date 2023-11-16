@@ -31,7 +31,7 @@ const LandingStyled = styled.div`
 
   .title__text {
     font-family: ${(props) => props.theme.fonts.tertiary};
-    font-size: 130px;
+    font-size: 100px;
     font-weight: 800;
     letter-spacing: 0.01px;
   }
@@ -46,14 +46,14 @@ const LandingStyled = styled.div`
     width: fit-content;
     text-align: center;
     font-family: ${(props) => props.theme.fonts.secondary};
-    font-size: 100px;
+    font-size: 80px;
     max-width: 1700px;
   }
 
   .landingpage__lema {
     width: fit-content;
     font-weight: 300;
-    font-size: 34px;
+    font-size: 24px;
     background-color: ${(props) => props.theme.colors.base};
     padding: 10px 50px;
     border-radius: 60px;
