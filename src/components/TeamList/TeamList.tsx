@@ -16,7 +16,6 @@ const TeamList = ({
           <MemberCard {...member} />
         ))}
       </div>
-      <p>El equipo de Mednebula</p>
     </TeamListStyled>
   );
 };

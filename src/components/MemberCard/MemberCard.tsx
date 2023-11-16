@@ -22,3 +22,4 @@ const MemberCard = ({
 
 export default MemberCard;
 export type { MemberCardProps };
+
