@@ -47,7 +47,6 @@ export const Landing = () => {
             />
           </g>
         </svg>
-
         <h1 className="title__text">MedNebula</h1>
       </div>
       <span className="landingpage__texts-container">
