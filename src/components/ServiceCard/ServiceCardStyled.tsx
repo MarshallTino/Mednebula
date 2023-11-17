@@ -11,7 +11,7 @@ const ServiceCardStyled = styled.div`
   color: ${(props) => props.theme.colors.mainLight};
   font-size: 25px;
   font-family: ${(props) => props.theme.fonts.tertiary};
-  box-shadow: 4px 0px 125px 50px rgba(0, 0, 0, 0.20);
+  box-shadow: 4px 0px 125px 50px rgba(0, 0, 0, 0.2);
 
   .service__container {
     padding: 50px;
@@ -48,6 +48,34 @@ const ServiceCardStyled = styled.div`
       #003a61 99.45%
     );
     align-items: flex-start;
+  }
+
+  // Media queries for mobile version
+  @media (max-width: 768px) {
+    .services-list :nth-child(2),
+    .services-list :nth-child(4) {
+      flex-direction: column-reverse;
+      font-size: 20px;
+    }
+
+    flex-direction: column;
+    .service__container {
+      padding: 20px;
+    }
+    .service__title {
+      font-size: 30px;
+    }
+    .service__description {
+      font-size: 20px;
+    }
+    .white .white,
+    .blue {
+      align-items: center;
+    }
+    .service_image {
+      width: 100%;
+      height: 100%;
+    }
   }
 `;
 
