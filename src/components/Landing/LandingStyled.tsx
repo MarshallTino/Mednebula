@@ -65,6 +65,16 @@ const LandingStyled = styled.div`
     padding: 0 115px;
   }
 
+  .landingpage {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 113, 188, 0.9) 0.03%,
+        rgba(0, 113, 188, 0.9) 70.82%,
+        rgba(0, 58, 97, 0.9) 99.45%
+      ),
+      url("https://cdn.mednebula.com/static/landing/Bd6lTTgI6YRDIwdapUofLD0QMelQjyDnpjcK8WXayT1pUyUySWv6JGxjo2d0fV4k/ol62C6mfnPsdOay5.jpg");
+  }
+
   @media screen and (max-width: 768px) {
     justify-content: space-evenly;
     padding-top: 20px;
