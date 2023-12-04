@@ -5,7 +5,7 @@ export const TeamMembers = [
         image: "https://cdn.mednebula.com/static/landing/CnFlgHqxXP2QLnsQsUGbaPQubkjMXdNZN2UfW1cWVsQHV1bPaKbKRC0VrLd4ScUD/ktTF1Lx76IxpJXgj.jpg",
     },
     {
-        name: "Angel Alcober",
+        name: "Ángel Alcober",
         role: "XXX",
         image: "https://cdn.mednebula.com/static/landing/iZ3ebUEpyf34B3Dp05aRJZyiYuqWtexAtM3Ai7gMC7HdyYfhe9lgku7laOPjAsA1/AoJWqoImXgrE9JId.jpg",
     },
