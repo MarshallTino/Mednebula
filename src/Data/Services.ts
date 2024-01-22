@@ -22,7 +22,7 @@ export const Services: ServiceStructure[] = [
   {
     color: "blue",
     description:
-      "Ofrecemos cursos y terapias complementarias, para profesionales y recién graduados del sector de la salud, especializados en movilidad reducida.",
+      "Ofrecemos cursos y terapias especializadas en movilidad reducida, para profesionales y recien graduados en el sector de la salud",
     title: "Cursos para profesionales online y presencial",
     image:
       "https://cdn.mednebula.com/static/landing/zxaI17GlN9eEqK30YSCdiJPKWXj9sWrqgcpJN4rFnK2uA0kE6TcdwkHly1glEu7t/95EwvCp3vE3uN0Ks.jpg",
@@ -35,6 +35,15 @@ export const Services: ServiceStructure[] = [
     title: "Noticias y Recursos",
     image:
       "https://cdn.mednebula.com/static/landing/MSYHgWKscPrf2KD60GEpSe5M3Y9yBxWdzHP6dzstv9YNR163EMLAG1pFZgaEsph3/kSs7ncpe8jb8Y5Fn.jpg",
+    imageClassname: "noticias",
+  },
+  {
+    color: "blue",
+    description:
+      "Las personas con movilidad reducida tendrán acceso a diversas actividades y eventos para disfrutar de varios deportes adaptados, eventos de salud mental y relaciones sociales.",
+    title: "Actividades y eventos",
+    image:
+      "https://cdn.mednebula.com/static/landing/dx5CH9sBuXCWcJyd56w0NwhWLsc5A3yRHTCfOgLj7EHYlk66apI8kUAO4tyCHVbE/g4BxWRJC8XqhTPuP.jpg",
     imageClassname: "noticias",
   },
 ];
