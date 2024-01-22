@@ -5,9 +5,7 @@ interface TeamListProps {
   members: MemberCardProps[];
 }
 
-const TeamList = ({
-  members
-}: TeamListProps) => {
+const TeamList = ({ members }: TeamListProps) => {
   return (
     <TeamListStyled>
       <h1 className="team__title">Nuestro Equipo</h1>
@@ -16,7 +14,6 @@ const TeamList = ({
           <MemberCard {...member} />
         ))}
       </div>
-      <p>El equipo de Mednebula</p>
     </TeamListStyled>
   );
 };

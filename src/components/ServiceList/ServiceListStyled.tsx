@@ -13,7 +13,7 @@ const ServiceListStyled = styled.ul`
   background-color: #ffffff;
 
   .services-list__spacer {
-    margin-top: 20px;
+    margin: 20px 0px 20px;
     width: 100%;
     border-bottom: 2px solid #000000;
   }
