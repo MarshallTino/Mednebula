@@ -43,6 +43,7 @@ const MemberCardStyled = styled.div`
   p {
     font-size: 14px;
     color: ${(props) => props.theme.colors.mainNeutral};
+    max-width: 200px;
 
     @media (max-width: 768px) {
       font-size: 12px;

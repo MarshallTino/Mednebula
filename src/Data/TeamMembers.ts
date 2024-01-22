@@ -19,7 +19,7 @@ export const TeamMembers = [
   },
   {
     name: "Eric Casañé",
-    role: "Programador Fullstack",
+    role: "Desarrollador Fullstack",
     image:
       "https://cdn.mednebula.com/static/landing/VVuWZIR9vjox6IrZ0qBNcfgyQt046R9Rc5MA0h0xByNJZd5ChtKt6XBiwT8UJTmB/C1U51HFgDuiUdskF.jpg",
   },
