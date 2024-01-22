@@ -23,7 +23,7 @@ export const ServiceCard = ({
           src={image}
           alt="service"
           width="600"
-          height="450"
+          height="300"
         />
         <div className="service__container blue">
           <h2 className="service__title ">{title}</h2>
@@ -43,7 +43,7 @@ export const ServiceCard = ({
           src={image}
           alt="service"
           width="600"
-          height="450"
+          height="300"
         />
       </ServiceDescriptionStyled>
     );
