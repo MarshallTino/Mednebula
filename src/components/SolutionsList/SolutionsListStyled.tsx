@@ -1,13 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const SolutionsListStyled = styled.div`
-width: 100%;
+  width: 100%;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-left: 60px;
-    padding-right: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 60px 0px 60px;
 `;
 
 export default SolutionsListStyled;
