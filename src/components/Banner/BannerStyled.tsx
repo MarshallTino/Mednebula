@@ -11,15 +11,14 @@ const BannerStyled = styled.div<BannerStyledProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(#0071bc, #0071bc80, #0071bcc4, #0071bc),
-    url(${(props) => props.backgroundImage});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(#0071bc, #00558d);
+
   flex-direction: ${(props) =>
     props.buttonPosition === "left" ? "row-reverse" : "row"};
   padding-left: 20%;
   padding-right: 20%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
