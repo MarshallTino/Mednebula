@@ -18,7 +18,13 @@ export const ServiceCard = ({
   if (color === "blue") {
     return (
       <ServiceDescriptionStyled className="service">
-        <img className="service_image" src={image} alt="service" width="600" height="450" />
+        <img
+          className="service_image"
+          src={image}
+          alt="service"
+          width="600"
+          height="300"
+        />
         <div className="service__container blue">
           <h2 className="service__title ">{title}</h2>
           <p className="service__description ">{description}</p>
@@ -32,7 +38,13 @@ export const ServiceCard = ({
           <h2 className="service__title white">{title}</h2>
           <p className="service__description white">{description}</p>
         </div>
-        <img className="service_image" src={image} alt="service" width="600" height="450" />
+        <img
+          className="service_image"
+          src={image}
+          alt="service"
+          width="600"
+          height="300"
+        />
       </ServiceDescriptionStyled>
     );
   }

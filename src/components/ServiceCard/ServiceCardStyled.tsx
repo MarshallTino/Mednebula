@@ -4,7 +4,7 @@ const ServiceCardStyled = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  min-height: 450px;
+  min-height: 300;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
