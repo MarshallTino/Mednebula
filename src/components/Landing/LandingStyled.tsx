@@ -105,7 +105,7 @@ const LandingStyled = styled.div`
     }
 
     .landingpage__button {
-      padding: 0 50px;
+      padding: 0 40px;
       margin-bottom: 50px;
     }
   }

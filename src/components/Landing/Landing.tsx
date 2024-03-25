@@ -59,7 +59,7 @@ export const Landing = () => {
       </span>
       <Button
         className="landingpage__button"
-        text="CONTACTAR"
+        text="Accede a nuestro foro"
         disabled={false}
       />
     </LandingStyled>

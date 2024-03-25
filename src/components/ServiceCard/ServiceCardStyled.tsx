@@ -50,6 +50,10 @@ const ServiceCardStyled = styled.div`
     align-items: flex-start;
   }
 
+  .service:hover {
+    background-color: ${(props) => props.theme.colors.mainDark};
+  }
+
   // Media queries for mobile version
   @media (max-width: 768px) {
     .services-list :nth-child(2),
