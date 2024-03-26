@@ -15,6 +15,14 @@ const RelevantInfo = (): JSX.Element => {
           <div className="info__text"> de Casos en ESPAÑA</div>
         </div>
         <div className="info__block border__left">
+          <video
+            className="info__video"
+            controls
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            src="https://cdn.mednebula.com/static/landing/GHlNJCEyymLGYaOvghoC0OZUEmxbiro6foA5TbNAQIKRtwMXM4LIPeanUv8c9AL1/RuPkiBkhvh1ST6yEE3XkQjshEE2HxKCS8TN2esvB7GYAGJU8DLTgrOJ1hPaS4jfS.mp4"
+          />
           <div className="info__subtext">
             “El fundador de Mednebula, nació con una parálisis cerebral
             espástica”

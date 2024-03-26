@@ -18,7 +18,8 @@ const RelevantInfoStyled = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin: 0 60px;
+    justify-content: space-around;
+    margin: 20px;
   }
 
   h1 {
@@ -28,7 +29,7 @@ const RelevantInfoStyled = styled.div`
   }
 
   .info__text {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
   }
 
@@ -48,14 +49,22 @@ const RelevantInfoStyled = styled.div`
   .info__subtext {
     font-size: 1.2rem;
     font-style: italic;
+    margin-top: 20px;
   }
 
   .border__left {
     border-left: 1px solid black;
   }
 
+  .info__video {
+    margin-left: 20px;
+    width: 100%;
+    height: auto;
+  }
+
   @media screen and (max-width: 768px) {
     padding: 0px 40px;
+    margin-bottom: 40px;
 
     .info__block {
       width: 100%;
@@ -72,6 +81,15 @@ const RelevantInfoStyled = styled.div`
       width: 100%;
       font-size: 1.2rem;
       margin-bottom: 10px;
+    }
+
+    .border__left {
+      border-left: none;
+    }
+
+    .info__video {
+      margin-left: 0;
+      margin-bottom: 40px;
     }
 
     .info__subtext {
