@@ -13,18 +13,14 @@ const LandingPage = (): JSX.Element => {
   return (
     <LandingPageStyled>
       <Landing />
-      <SolutionsList 
-        solutions= {solutionsData} 
-      />
+      <SolutionsList solutions={solutionsData} />
       <RelevantInfo />
       <ServiceList />
-      <OurTeam 
-        members={TeamMembers}
-      />
-      <Banner 
-        image="https://cdn.mednebula.com/static/landing/PaPOG7OSz0rIb76J2ynfH1sAcJARy6I7zs2Le17AlZ5hwYvdp1l5lIrI0Vd3iUZX/LJMrhdbRrlT8bIKW.svg" 
-        buttonPosition="left" 
-        buttonText="CONTACTAR" 
+      <OurTeam members={TeamMembers} />
+      <Banner
+        image="https://cdn.mednebula.com/static/landing/PaPOG7OSz0rIb76J2ynfH1sAcJARy6I7zs2Le17AlZ5hwYvdp1l5lIrI0Vd3iUZX/LJMrhdbRrlT8bIKW.svg"
+        buttonPosition="left"
+        buttonText="CONTACTAR"
         message="¿Quieres más información?"
       />
       <Footer />

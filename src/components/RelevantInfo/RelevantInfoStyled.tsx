@@ -58,10 +58,13 @@ const RelevantInfoStyled = styled.div`
 
   .info__video {
     margin-left: 20px;
+    width: 100%;
+    height: auto;
   }
 
   @media screen and (max-width: 768px) {
     padding: 0px 40px;
+    margin-bottom: 40px;
 
     .info__block {
       width: 100%;
@@ -78,6 +81,15 @@ const RelevantInfoStyled = styled.div`
       width: 100%;
       font-size: 1.2rem;
       margin-bottom: 10px;
+    }
+
+    .border__left {
+      border-left: none;
+    }
+
+    .info__video {
+      margin-left: 0;
+      margin-bottom: 40px;
     }
 
     .info__subtext {
