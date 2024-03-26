@@ -6,22 +6,10 @@ export const TeamMembers = [
       "https://cdn.mednebula.com/static/landing/CnFlgHqxXP2QLnsQsUGbaPQubkjMXdNZN2UfW1cWVsQHV1bPaKbKRC0VrLd4ScUD/ktTF1Lx76IxpJXgj.jpg",
   },
   {
-    name: "Ángel Alcober",
-    role: "Diseñador Gráfico",
-    image:
-      "https://cdn.mednebula.com/static/landing/iZ3ebUEpyf34B3Dp05aRJZyiYuqWtexAtM3Ai7gMC7HdyYfhe9lgku7laOPjAsA1/AoJWqoImXgrE9JId.jpg",
-  },
-  {
     name: "Marcel Martino",
     role: "CTO",
     image:
       "https://cdn.mednebula.com/static/landing/XnSywjO6SPnGhR8aCtagvVpak6DFzu1tvJSqxqtJPniG5vI5W8QhDikCgXDDBnIH/JjtxB84H2G44eWXx.jpg",
-  },
-  {
-    name: "Eric Casañé",
-    role: "Desarrollador Fullstack",
-    image:
-      "https://cdn.mednebula.com/static/landing/VVuWZIR9vjox6IrZ0qBNcfgyQt046R9Rc5MA0h0xByNJZd5ChtKt6XBiwT8UJTmB/C1U51HFgDuiUdskF.jpg",
   },
   {
     name: "Àlex Navarro",
