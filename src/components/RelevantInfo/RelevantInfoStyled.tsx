@@ -18,7 +18,8 @@ const RelevantInfoStyled = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin: 0 60px;
+    justify-content: space-around;
+    margin: 20px;
   }
 
   h1 {
@@ -28,7 +29,7 @@ const RelevantInfoStyled = styled.div`
   }
 
   .info__text {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
   }
 
@@ -48,10 +49,15 @@ const RelevantInfoStyled = styled.div`
   .info__subtext {
     font-size: 1.2rem;
     font-style: italic;
+    margin-top: 20px;
   }
 
   .border__left {
     border-left: 1px solid black;
+  }
+
+  .info__video {
+    margin-left: 20px;
   }
 
   @media screen and (max-width: 768px) {
