@@ -23,4 +23,16 @@ export const TeamMembers = [
     image:
       "https://cdn.mednebula.com/static/landing/f8s5b75V0abfsBqLhLjs78RuBg51fyZXbHLVZbDLR5BVQXNbSxtCl9qZFI2NYfnB/TfORAKbVxxphcYYw.jpg",
   },
+  {
+    name: "Eloi Egea",
+    role: "Desarrollador Fullstack",
+    image:
+      "https://cdn.mednebula.com/static/landing/3CCBjj7kA4LAZfw5feSwJFR20ehv2jJE3uA7lhjOAHaHAB3FbqcI7N4vz0wVdF1K/9NmzGVGi7wHCSeTp.jpg",
+  },
+  {
+    name: "Nil Martinez",
+    role: "Desarrollador en ciberseguridad",
+    image:
+      "https://cdn.mednebula.com/static/landing/EpTObXpHMbNgqDngxwKpzGWwr3xgIfouwGBdLxtUnXAkW7yB8FSkfJS36tOVJl3m/BuMDR9hNZ82nw3el.jpg",
+  },
 ];
