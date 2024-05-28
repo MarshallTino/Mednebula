@@ -1,5 +1,7 @@
 import Button from "../Button/Button";
+import { StyledLink } from "../Button/ButtonStyled";
 import LandingStyled from "./LandingStyled";
+
 
 export const Landing = () => {
   return (
@@ -57,11 +59,16 @@ export const Landing = () => {
           Deseamos darte el apoyo que necesitas cuando lo necesitas
         </h3>
       </span>
+      <div className="landingpage__button-container">
       <Button
         className="landingpage__button"
         text="Accede a nuestro foro"
         disabled={false}
       />
+ <StyledLink to="solutionListSection" smooth={true} duration={500} className="landingpage__button">
+  Acceda a nuestra plataforma
+</StyledLink>
+</div>
     </LandingStyled>
   );
 };

@@ -1,4 +1,7 @@
-import { styled } from "styled-components";
+
+import styled from 'styled-components';
+
+
 
 const LandingStyled = styled.div`
   display: flex;
@@ -61,9 +64,7 @@ const LandingStyled = styled.div`
     text-align: center;
   }
 
-  .landingpage__button {
-    padding: 0 115px;
-  }
+
 
   .landingpage {
     background-image: linear-gradient(
@@ -73,6 +74,13 @@ const LandingStyled = styled.div`
         rgba(0, 58, 97, 0.9) 99.45%
       ),
       url("https://cdn.mednebula.com/static/landing/Bd6lTTgI6YRDIwdapUofLD0QMelQjyDnpjcK8WXayT1pUyUySWv6JGxjo2d0fV4k/ol62C6mfnPsdOay5.jpg");
+  }
+
+  .landingpage__button-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
   }
 
   @media screen and (max-width: 768px) {

@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from 'react';
+import { scroller } from 'react-scroll';
 import { solutionsData } from "../Data/solutionsData";
 import { TeamMembers } from "../Data/TeamMembers";
 import Banner from "../components/Banner/Banner";
@@ -10,12 +12,36 @@ import SolutionsList from "../components/SolutionsList/SolutionsList";
 import LandingPageStyled from "./LandingPageStyled";
 
 const LandingPage = (): JSX.Element => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!scrolled) {
+        scroller.scrollTo('solutionListSection', {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart'
+        });
+        setScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
+
   return (
     <LandingPageStyled>
       <Landing />
+      <div id="solutionListSection">
       <SolutionsList solutions={solutionsData} />
+      </div>
       <RelevantInfo />
-      <ServiceList />
+      {/* Add an id to the ServiceList component for scrolling */}
+        <ServiceList />
       <OurTeam members={TeamMembers} />
       <Banner
         image="https://cdn.mednebula.com/static/landing/PaPOG7OSz0rIb76J2ynfH1sAcJARy6I7zs2Le17AlZ5hwYvdp1l5lIrI0Vd3iUZX/LJMrhdbRrlT8bIKW.svg"
