@@ -22,11 +22,5 @@ export const TeamMembers = [
     role: "Asesorador médico",
     image:
       "https://cdn.mednebula.com/static/landing/f8s5b75V0abfsBqLhLjs78RuBg51fyZXbHLVZbDLR5BVQXNbSxtCl9qZFI2NYfnB/TfORAKbVxxphcYYw.jpg",
-  },
-  {
-    name: "Eloi Egea",
-    role: "Desarrollador Fullstack",
-    image:
-      "https://cdn.mednebula.com/static/landing/3CCBjj7kA4LAZfw5feSwJFR20ehv2jJE3uA7lhjOAHaHAB3FbqcI7N4vz0wVdF1K/9NmzGVGi7wHCSeTp.jpg",
   }
 ];
