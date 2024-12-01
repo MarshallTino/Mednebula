@@ -1,9 +1,10 @@
 import Button from "../Button/Button";
 import { StyledLink } from "../Button/ButtonStyled";
 import LandingStyled from "./LandingStyled";
-
+import { useNavigate } from "react-router-dom";
 
 export const Landing = () => {
+  const navigate = useNavigate();
   return (
     <LandingStyled className="landingpage">
       <div className="landingpage__title">
@@ -60,15 +61,21 @@ export const Landing = () => {
         </h3>
       </span>
       <div className="landingpage__button-container">
-      <Button
-        className="landingpage__button"
-        text="Accede a nuestro foro"
-        disabled={false}
-      />
- <StyledLink to="solutionListSection" smooth={true} duration={500} className="landingpage__button">
-  Acceda a nuestra plataforma
-</StyledLink>
-</div>
+        <Button
+          className="landingpage__button"
+          text="Accede a nuestro foro"
+          disabled={false}
+          action={() => navigate("/foro")}
+        />
+        <StyledLink
+          to="solutionListSection"
+          smooth={true}
+          duration={500}
+          className="landingpage__button"
+        >
+          Acceda a nuestra plataforma
+        </StyledLink>
+      </div>
     </LandingStyled>
   );
 };
