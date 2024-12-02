@@ -15,8 +15,8 @@ const LayoutStyled = styled.div`
   }
 `;
 
-const MainContent = styled.div<{ addPadding: boolean }>`
-  padding-top: ${({ addPadding }) => (addPadding ? "70px" : "0")};
+const MainContent = styled.div<{ $addPadding: boolean }>`
+  padding: ${({ $addPadding }) => ($addPadding ? "20px" : "0px")};
 `;
 
 export const Layout = (): JSX.Element => {
@@ -28,7 +28,7 @@ export const Layout = (): JSX.Element => {
       <LayoutStyled>
         <Navbar />
         <main>
-          <MainContent addPadding={!isLandingPage}>
+          <MainContent $addPadding={!isLandingPage}>
             <Outlet />
           </MainContent>
         </main>

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 interface BannerStyledProps {
-  backgroundImage: string;
-  buttonPosition: "left" | "right";
+  $backgroundImage: string;
+  $buttonPosition: "left" | "right";
 }
 
 const BannerStyled = styled.div<BannerStyledProps>`
@@ -14,7 +14,7 @@ const BannerStyled = styled.div<BannerStyledProps>`
   background: linear-gradient(#0071bc, #00558d);
 
   flex-direction: ${(props) =>
-    props.buttonPosition === "left" ? "row-reverse" : "row"};
+    props.$buttonPosition === "left" ? "row-reverse" : "row"};
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 10px;
@@ -34,9 +34,9 @@ const BannerStyled = styled.div<BannerStyledProps>`
     justify-content: center;
     @media (min-width: 768px) {
       margin-left: ${(props) =>
-        props.buttonPosition === "left" ? "auto" : "0"};
+        props.$buttonPosition === "left" ? "auto" : "0"};
       margin-right: ${(props) =>
-        props.buttonPosition === "right" ? "auto" : "0"};
+        props.$buttonPosition === "right" ? "auto" : "0"};
     }
   }
 
@@ -44,9 +44,9 @@ const BannerStyled = styled.div<BannerStyledProps>`
     font-family: ${(props) => props.theme.fonts.primary};
     @media (min-width: 768px) {
       margin-left: ${(props) =>
-        props.buttonPosition === "right" ? "auto" : "0"};
+        props.$buttonPosition === "right" ? "auto" : "0"};
       margin-right: ${(props) =>
-        props.buttonPosition === "left" ? "auto" : "0"};
+        props.$buttonPosition === "left" ? "auto" : "0"};
     }
     max-width: 200px;
     font-size: 30px;

@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <NavbarWrapper show={showNavbar}>
+      <NavbarWrapper $show={showNavbar}>
         {/* Logo */}
         <Link to="/">
           <img src="/logofullcolor.svg" alt="MedNebula logo" className="logo" />

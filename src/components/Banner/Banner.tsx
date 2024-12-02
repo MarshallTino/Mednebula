@@ -15,7 +15,7 @@ export const Banner = ({
   message,
 }: BannerProps): JSX.Element => {
   return (
-    <BannerStyled backgroundImage={image} buttonPosition={buttonPosition}>
+    <BannerStyled $backgroundImage={image} $buttonPosition="left">
       <div className={`button ${buttonPosition}`}>
         <Button
           className="landingpage__button"

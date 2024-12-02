@@ -1,3 +1,4 @@
+// src/components/ServiceList/ServiceList.tsx
 import { Services } from "../../Data/Services";
 import ServiceCard from "../ServiceCard/ServiceCard";
 import ServiceListStyled from "./ServiceListStyled";
@@ -8,7 +9,7 @@ const ServiceList = (): JSX.Element => {
   return (
     <ServiceListStyled className="services-list">
       {services.map((service) => (
-        <ServiceCard {...service} />
+        <ServiceCard key={service.title} {...service} />
       ))}
       <div className="services-list__spacer"></div>
     </ServiceListStyled>

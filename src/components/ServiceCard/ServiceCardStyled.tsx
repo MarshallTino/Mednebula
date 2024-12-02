@@ -1,10 +1,11 @@
-import { styled } from "styled-components";
+// src/components/ServiceCard/ServiceCardStyled.tsx
+import styled from "styled-components";
 
-const ServiceCardStyled = styled.div`
+const ServiceCardStyled = styled.div<{ clickable?: boolean }>`
   display: flex;
   width: 100%;
   height: 100%;
-  min-height: 300;
+  min-height: 300px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -12,6 +13,12 @@ const ServiceCardStyled = styled.div`
   font-size: 25px;
   font-family: ${(props) => props.theme.fonts.tertiary};
   box-shadow: 4px 0px 125px 50px rgba(0, 0, 0, 0.2);
+  cursor: ${(props) => (props.clickable ? "pointer" : "default")};
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: ${(props) => (props.clickable ? "scale(1.02)" : "none")};
+  }
 
   .service__container {
     padding: 50px;
@@ -68,7 +75,7 @@ const ServiceCardStyled = styled.div`
     .service__description {
       font-size: 20px;
     }
-    .white .white,
+    .white,
     .blue {
       align-items: center;
     }

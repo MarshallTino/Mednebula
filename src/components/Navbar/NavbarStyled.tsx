@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const NavbarWrapper = styled.nav<{ show: boolean }>`
+export const NavbarWrapper = styled.nav<{ $show: boolean }>`
+  display: ${({ $show }) => ($show ? "flex" : "none")};
   position: fixed;
   top: 0;
   left: 0;
@@ -8,7 +9,6 @@ export const NavbarWrapper = styled.nav<{ show: boolean }>`
   height: 70px;
   background-color: #ffffff;
   z-index: 1000;
-  display: ${({ show }) => (show ? "flex" : "none")};
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
