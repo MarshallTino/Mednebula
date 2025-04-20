@@ -1,100 +1,130 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 const RelevantInfoStyled = styled.div`
-  padding-right: 80px;
-  padding-left: 80px;
-  margin-top: 15px;
-  margin-bottom: 100px;
-  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0; /* Slightly reduced vertical margin */
 
   .info__container {
     display: flex;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    padding: 0 20px; /* Add horizontal padding to match other sections */
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: stretch;
+      padding: 0 40px; /* Larger padding on tablets */
+    }
+    
+    @media (min-width: 1024px) {
+      padding: 0 60px; /* Even larger padding on desktops */
+    }
   }
 
   .info__block {
-    width: 50%;
+    flex: 1;
+    padding: 30px;
+    background-color: ${props => props.theme.colors.mainLight};
+    border-radius: 12px; /* Increased border radius */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* Enhanced shadow for better contrast */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin: 20px;
-  }
-
-  h1 {
-    margin-top: 20px;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-
-  .info__text {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-  }
-
-  .info__green {
-    font-size: 1.7rem;
-    font-weight: bold;
-    color: ${(props) => props.theme.colors.mainNeutral};
-  }
-
-  .info__line {
-    width: 90%;
-    height: 1px;
-    background-color: black;
-    margin: 10px auto;
-  }
-
-  .info__subtext {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-top: 20px;
-  }
-
-  .border__left {
-    border-left: 1px solid black;
-  }
-
-  .info__video {
-    margin-left: 20px;
-    width: 100%;
-    height: auto;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 0px 40px;
-    margin-bottom: 40px;
-
-    .info__block {
-      width: 100%;
-      margin: 0;
-      gap: 10px;
+    border: 1px solid ${props => props.theme.colors.gray200}; /* Added subtle border */
+    position: relative; /* Needed for pseudo-elements */
+    
+    /* Top blue gradient line */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 3px;
+      background: linear-gradient(to right, transparent, ${props => props.theme.colors.base}, transparent);
+      border-radius: 2px;
     }
-
-    .info__container {
-      flex-direction: column;
-      width: 100%;
+    
+    /* Bottom blue gradient line */
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      right: 10%;
+      height: 3px;
+      background: linear-gradient(to right, transparent, ${props => props.theme.colors.base}, transparent);
+      border-radius: 2px;
     }
-
+    
+    h3 {
+      font-size: 1.65rem;
+      margin-bottom: 22px;
+      color: ${props => props.theme.colors.mainDark};
+      position: relative;
+      padding-bottom: 12px;
+      font-weight: 700;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 70px;
+        height: 4px;
+        background: linear-gradient(to right, 
+          ${props => props.theme.colors.base},
+          ${props => props.theme.colors.accent});
+        border-radius: 2px;
+      }
+    }
+    
     .info__text {
-      width: 100%;
-      font-size: 1.2rem;
-      margin-bottom: 10px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: ${props => props.theme.colors.gray800}; /* Darker text for better readability */
+
+      b {
+        color: ${props => props.theme.colors.base}; /* Using base color for bold text */
+        font-weight: 700;
+      }
     }
 
-    .border__left {
-      border-left: none;
+    .info__green {
+      font-size: 1.6rem; /* Smaller size */
+      font-weight: 800;
+      color: ${props => props.theme.colors.base}; /* Using brand color */
+      margin: 10px auto 5px;
+      text-align: center; /* Centered */
     }
 
     .info__video {
-      margin-left: 0;
-      margin-bottom: 40px;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px; 
+      border: 1px solid ${props => props.theme.colors.gray300};
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Added shadow to video */
     }
 
     .info__subtext {
-      display: none;
+      font-style: italic;
+      color: ${props => props.theme.colors.gray700};
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 12px;
+      background-color: ${props => props.theme.colors.gray100};
+      border-radius: 6px;
+      border-left: none; /* Removed blue accent */
     }
   }
 `;
+
 export default RelevantInfoStyled;

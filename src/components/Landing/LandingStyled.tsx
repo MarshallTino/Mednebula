@@ -1,116 +1,157 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-const LandingStyled = styled.div`
+// Add subtle wave animation for a modern dynamic feel
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const waveAnimation = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+`;
+
+// Hero section with improved contrast for accessibility
+export const HeroSection = styled.section`
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 800px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Improved contrast blue gradient for better accessibility */
+  background: ${props => props.theme.colors.blueGradient};
+  
+  @media (max-width: 768px) {
+    height: 100vh;
+    min-height: 650px;
+    padding: 100px 0 50px;
+    
+    /* Counteract global main padding on mobile */
+    margin-left: -15px; 
+    margin-right: -15px;
+    width: calc(100% + 30px);
+    max-width: calc(100% + 30px); /* Ensure it can exceed parent width */
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
+  }
+`;
+
+export const LandingContainer = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  height: 100vh;
-  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+`;
+
+// Add Logo styled component
+export const Logo = styled.img`
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+`;
+
+// Updated Title with better contrast for readability
+export const Title = styled.h1`
+  font-family: ${props => props.theme.fonts.primary};
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+`;
+
+// Updated Subtitle with better contrast
+export const Subtitle = styled.p`
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto 25px;
+  color: #FFFFFF;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+`;
+
+// Updated Description with better contrast
+export const Description = styled.p`
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #FFFFFF;
+  line-height: 1.6;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+`;
+
+// Updated ButtonContainer with more distinctive styling
+export const ButtonContainer = styled.div`
+  display: flex;
   gap: 20px;
-  padding-bottom: 50px;
-  color: ${(props) => props.theme.colors.mainLight};
-
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-
-  .landingpage__title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  margin-top: 20px;
+  
+  .landingpage__button {
+    padding: 12px 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    border-radius: 6px;
+  }
+  
+  .secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
     gap: 15px;
-  }
-
-  .title__svg {
-    width: 200px;
-    height: 200px;
-  }
-
-  .title__text {
-    font-family: ${(props) => props.theme.fonts.tertiary};
-    font-size: 100px;
-    font-weight: 800;
-    letter-spacing: 0.01px;
-  }
-  .landingpage__texts-container {
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-  }
-
-  .landingpage__subtitle {
-    width: fit-content;
-    text-align: center;
-    font-family: ${(props) => props.theme.fonts.secondary};
-    font-size: 80px;
-    max-width: 1700px;
-  }
-
-  .landingpage__lema {
-    width: fit-content;
-    font-family: ${(props) => props.theme.fonts.primary};
-
-    font-weight: 300;
-    font-size: 24px;
-    padding: 10px 50px;
-    border-radius: 60px;
-    text-align: center;
-  }
-
-  .landingpage {
-    background-image: linear-gradient(
-        180deg,
-        rgba(0, 113, 188, 0.9) 0.03%,
-        rgba(0, 113, 188, 0.9) 70.82%,
-        rgba(0, 58, 97, 0.9) 99.45%
-      ),
-      url("https://cdn.mednebula.com/static/landing/Bd6lTTgI6YRDIwdapUofLD0QMelQjyDnpjcK8WXayT1pUyUySWv6JGxjo2d0fV4k/ol62C6mfnPsdOay5.jpg");
-  }
-
-  .landingpage__button-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  @media screen and (max-width: 768px) {
-    justify-content: space-evenly;
-    padding-top: 20px;
-    .landingpage__title {
-      .title__svg {
-        width: 100px;
-        height: 100px;
-      }
-      .title__text {
-        font-size: 40px;
-      }
-    }
-    .landingpage__texts-container {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .landingpage__subtitle {
-      font-size: 40px;
-    }
-
-    .landingpage__lema {
-      font-weight: 600;
-      font-size: 17px;
-      padding: 10px 30px;
-    }
-
+    
     .landingpage__button {
-      margin-bottom: 50px;
+      padding: 10px 25px;
+      font-size: 0.9rem;
+      min-width: 200px;
     }
   }
 `;
 
-export default LandingStyled;
+// Keep the original naming for backward compatibility
+export const LandingStyled = HeroSection;
+export const LandingTitle = Title;
+export const LandingSubtitle = Subtitle;

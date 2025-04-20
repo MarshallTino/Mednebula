@@ -1,46 +1,33 @@
 import React from "react";
-import ServiceCardStyled from "./ServiceCardStyled";
+import { ServiceCardContainer, ServiceImage, ServiceOverlay, ReadMoreButton } from "./ServiceCardStyled";
+import { useNavigate } from "react-router-dom";
 
 interface ServiceCardProps {
-  color: string;
+  image: string;
   title: string;
   description: string;
-  image: string;
-  imageClassname: string;
-  route?: string;
+  route: string; // Changed from slug to route
 }
 
-export const ServiceCard = ({
-  color,
-  description,
-  title,
-  image,
-  imageClassname,
-  route: link,
-}: ServiceCardProps) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description, route }) => {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    // Navigate only if route is not empty
+    if (route) {
+      navigate(route);
+    }
+  };
+
   return (
-    <ServiceCardStyled
-      className="service"
-      onClick={() => link && (window.location.href = link)}
-    >
-      {color === "blue" ? (
-        <>
-          <img className="service_image" src={image} alt="service" />
-          <div className="service__container blue">
-            <h2 className="service__title">{title}</h2>
-            <p className="service__description">{description}</p>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="service__container white">
-            <h2 className="service__title white">{title}</h2>
-            <p className="service__description white">{description}</p>
-          </div>
-          <img className="service_image" src={image} alt="service" />
-        </>
-      )}
-    </ServiceCardStyled>
+    <ServiceCardContainer onClick={handleCardClick} $isClickable={!!route}> {/* Pass clickable status */}
+      <ServiceImage src={image} alt={title} />
+      <ServiceOverlay className="overlay">
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <ReadMoreButton>Leer Más</ReadMoreButton>
+      </ServiceOverlay>
+    </ServiceCardContainer>
   );
 };
 

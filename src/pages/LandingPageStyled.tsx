@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 
-background: #ffffff;
+background: ${props => props.theme.colors.backgroundLightGrey};
 
 `
 

@@ -15,29 +15,17 @@ const LayoutStyled = styled.div`
   }
 `;
 
-const MainContent = styled.div<{ $addPadding: boolean }>`
-  padding: ${({ $addPadding }) => ($addPadding ? "20px" : "0px")};
-`;
 
 export const Layout = (): JSX.Element => {
-  const location = useLocation();
-  const isLandingPage = location.pathname === "/";
 
   return (
     <>
       <LayoutStyled>
         <Navbar />
         <main>
-          <MainContent $addPadding={!isLandingPage}>
             <Outlet />
-          </MainContent>
         </main>
-        <Banner
-          image="https://cdn.mednebula.com/static/landing/PaPOG7OSz0rIb76J2ynfH1sAcJARy6I7zs2Le17AlZ5hwYvdp1l5lIrI0Vd3iUZX/LJMrhdbRrlT8bIKW.svg"
-          buttonPosition="left"
-          buttonText="CONTACTAR"
-          message="¿Quieres más información?"
-        />
+
         <Footer />
       </LayoutStyled>
     </>

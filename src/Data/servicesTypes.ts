@@ -4,4 +4,5 @@ export interface ServiceStructure {
   description: string;
   imageClassname: string;
   image: string;
+  route: string;
 }

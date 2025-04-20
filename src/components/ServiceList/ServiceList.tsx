@@ -4,13 +4,21 @@ import ServiceCard from "../ServiceCard/ServiceCard";
 import ServiceListStyled from "./ServiceListStyled";
 
 const ServiceList = (): JSX.Element => {
-  const services = Services;
-
   return (
-    <ServiceListStyled className="services-list">
-      {services.map((service) => (
-        <ServiceCard key={service.title} {...service} />
-      ))}
+    <ServiceListStyled>
+      <div className="services-grid">
+        {Services.map((service) => (
+          <div key={service.title} className="service-card-wrapper">
+            {/* Pass only the required props explicitly */}
+            <ServiceCard 
+              image={service.image}
+              title={service.title}
+              description={service.description}
+              route={service.route} 
+            />
+          </div>
+        ))}
+      </div>
       <div className="services-list__spacer"></div>
     </ServiceListStyled>
   );

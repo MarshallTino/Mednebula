@@ -3,20 +3,17 @@ import SolutionsListStyled from './SolutionsListStyled';
 
 interface SolutionsListProps {
   solutions: SolutionItemProps[];
-  id?: string; // Add this line
+  id?: string;
 }
 
-const SolutionsList = ({ 
-  solutions,
-  id, // Add this line
-}: SolutionsListProps): JSX.Element => {
-  return (
-    <SolutionsListStyled id={id}> {/* Add the id prop here */}
+const SolutionsList = ({ solutions, id }: SolutionsListProps): JSX.Element => (
+  <SolutionsListStyled id={id}>
+    <div className="solutions-wrapper">
       {solutions.map((solution) => (
         <SolutionItem key={solution.image} {...solution} />
       ))}
-    </SolutionsListStyled>
-  );
-};
+    </div>
+  </SolutionsListStyled>
+);
 
 export default SolutionsList;

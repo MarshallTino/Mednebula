@@ -3,9 +3,10 @@ import RelevantInfoStyled from "./RelevantInfoStyled";
 const RelevantInfo = (): JSX.Element => {
   return (
     <RelevantInfoStyled>
+      {/* Removed duplicate title */}
       <div className="info__container">
         <div className="info__block">
-          <h1>Guiar a las familias</h1>
+          <h3>Propósito del Proyecto</h3>
           <div className="info__text">
             Mednebula nace con el objetivo de ser un centro de información
             especializado, ofrecer apoyo y <b>seguimiento a largo plazo</b>, a
