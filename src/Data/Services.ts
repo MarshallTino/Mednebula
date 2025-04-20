@@ -2,6 +2,16 @@ import { ServiceStructure } from "./servicesTypes";
 
 export const Services: ServiceStructure[] = [
   {
+    color: "white",
+    description:
+      "Las personas con movilidad reducida tendrán acceso a diversas actividades y eventos para disfrutar de varios deportes adaptados, eventos de salud mental y relaciones sociales.",
+    title: "Servicios y Actividades",
+    image:
+      "https://cdn.mednebula.com/static/landing/dx5CH9sBuXCWcJyd56w0NwhWLsc5A3yRHTCfOgLj7EHYlk66apI8kUAO4tyCHVbE/g4BxWRJC8XqhTPuP.jpg",
+    imageClassname: "noticias",
+    route: "/servicios",
+  },
+  {
     imageClassname: "social-media",
     color: "blue",
     description:
@@ -9,6 +19,7 @@ export const Services: ServiceStructure[] = [
     title: "Red Social Médica",
     image:
       "https://cdn.mednebula.com/static/landing/b5Ks6BzkUxOvizdP4HdAvC5gT5GkKg0x0XhLf5WrYxbChPFlHDWMYEWzJPvTPGNf/Cyc7L0umhZSNB8Nt.jpg",
+    route: "/foro",
   },
   {
     color: "white",
@@ -18,6 +29,7 @@ export const Services: ServiceStructure[] = [
     image:
       "https://cdn.mednebula.com/static/landing/jKA86T9zPxbS6OvQF870rihPcYJrVK84iaenLl2yiJ4pY1ffS68tN66nMlYn0fqK/CNysCOMxz2sbYKwQ.jpg",
     imageClassname: "gestor",
+    route: "",
   },
   {
     color: "blue",
@@ -27,6 +39,7 @@ export const Services: ServiceStructure[] = [
     image:
       "https://cdn.mednebula.com/static/landing/zxaI17GlN9eEqK30YSCdiJPKWXj9sWrqgcpJN4rFnK2uA0kE6TcdwkHly1glEu7t/95EwvCp3vE3uN0Ks.jpg",
     imageClassname: "cursos",
+    route: "",
   },
   {
     color: "white",
@@ -36,14 +49,6 @@ export const Services: ServiceStructure[] = [
     image:
       "https://cdn.mednebula.com/static/landing/MSYHgWKscPrf2KD60GEpSe5M3Y9yBxWdzHP6dzstv9YNR163EMLAG1pFZgaEsph3/kSs7ncpe8jb8Y5Fn.jpg",
     imageClassname: "noticias",
-  },
-  {
-    color: "blue",
-    description:
-      "Las personas con movilidad reducida tendrán acceso a diversas actividades y eventos para disfrutar de varios deportes adaptados, eventos de salud mental y relaciones sociales.",
-    title: "Actividades y eventos",
-    image:
-      "https://cdn.mednebula.com/static/landing/dx5CH9sBuXCWcJyd56w0NwhWLsc5A3yRHTCfOgLj7EHYlk66apI8kUAO4tyCHVbE/g4BxWRJC8XqhTPuP.jpg",
-    imageClassname: "noticias",
+    route: "",
   },
 ];

@@ -2,18 +2,23 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
   width: 100%;
+  background-color: ${(props) => props.theme.colors.mainDark};
+  color: ${(props) => props.theme.colors.mainLight};
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 
   @media (min-width: 768px) {
     flex-direction: row;
-    justify-content: space-between;
-    padding: 65px;
+    justify-content: space-around;
+    padding: 70px 40px;
   }
 `;
 
@@ -48,7 +53,7 @@ export const SocialContainer = styled.div`
 `;
 
 export const Copyright = styled.div`
-  background: linear-gradient(${(props) => props.theme.colors.base}, #00558d);
+  background-color: ${(props) => props.theme.colors.mainDark};
   color: ${(props) => props.theme.colors.mainLight};
   font-size: 12px;
   text-align: center;

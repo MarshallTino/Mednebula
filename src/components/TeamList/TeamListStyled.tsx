@@ -1,21 +1,20 @@
 import styled from "styled-components";
 
-const TeamListStyled = styled.div`
-  padding-left: 80px;
-  padding-right: 80px;
-  margin-bottom: 80px;
-  text-align: center;
+export default styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  
   .team__list {
-    gap: 20px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 0px;
+    gap: 25px;
+    margin-top: 20px;
+    
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
   }
 `;
-
-export default TeamListStyled;

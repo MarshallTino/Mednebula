@@ -1,9 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { SectionContainer, ContentContainer } from "../components/Container/ContainerStyled";
 import styled from "styled-components";
 
-const SectionTitle = styled.h2`
+export const ContactPageStyled = styled.div`
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+`;
+
+export const SectionTitle = styled.h2`
   font-size: 2.4rem;
   font-weight: 800;
   text-align: center;
@@ -21,9 +25,17 @@ const SectionTitle = styled.h2`
   }
 `;
 
-const NotFoundButton = styled(Link)`
+export const SectionDescription = styled.p`
+  text-align: center;
+  font-size: 1.1rem;
+  color: ${props => props.theme.colors.gray700};
+  margin: 0 auto 30px;
+  max-width: 700px;
+  line-height: 1.7;
+`;
+
+export const ContactLinkButton = styled.a`
   display: inline-block;
-  margin: 20px 10px 0 10px;
   padding: 14px 35px;
   background: ${props => props.theme.colors.base};
   color: white;
@@ -46,22 +58,3 @@ const NotFoundButton = styled(Link)`
     box-shadow: ${props => props.theme.shadows.small};
   }
 `;
-
-const NotFound: React.FC = () => {
-  return (
-    <SectionContainer $bgColor="light">
-      <ContentContainer>
-        <SectionTitle>404 - Página no encontrada</SectionTitle>
-        <p style={{ fontSize: "1.2rem", color: "#555", textAlign: "center", marginBottom: 30 }}>
-          La página que buscas no existe o el enlace es incorrecto.
-        </p>
-        <div style={{ textAlign: "center" }}>
-          <NotFoundButton to="/">Volver al Inicio</NotFoundButton>
-          <NotFoundButton to="/contacto">Ir a Contacto</NotFoundButton>
-        </div>
-      </ContentContainer>
-    </SectionContainer>
-  );
-};
-
-export default NotFound;
