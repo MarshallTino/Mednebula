@@ -17,7 +17,7 @@ const ServiceListStyled = styled.ul`
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  padding: 20px 0 60px;
+  padding: 60px 0 60px; // Increased top padding to 60px to add more space after the horizontal line
   position: relative;
   
   .services-list__title {

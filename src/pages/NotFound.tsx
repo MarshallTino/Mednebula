@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { SectionContainer, ContentContainer } from "../components/Container/ContainerStyled";
 import styled from "styled-components";
+import ButtonStyled, { ButtonType } from "../components/Button/ButtonStyled";
 
 const SectionTitle = styled.h2`
   font-size: 2.4rem;
@@ -21,6 +22,7 @@ const SectionTitle = styled.h2`
   }
 `;
 
+// Styled link component that extends our button styling
 const NotFoundButton = styled(Link)`
   display: inline-block;
   margin: 20px 10px 0 10px;
@@ -28,19 +30,36 @@ const NotFoundButton = styled(Link)`
   background: ${props => props.theme.colors.base};
   color: white;
   border: none;
-  border-radius: ${props => props.theme.borderRadius.medium};
+  border-radius: 6px;
   font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: ${props => props.theme.animations.transition};
+  transition: all 0.3s ease;
   box-shadow: ${props => props.theme.shadows.small};
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  }
+  
   &:hover {
     background: ${props => props.theme.colors.accent};
+    transform: translateY(-3px);
     box-shadow: ${props => props.theme.shadows.medium};
-    transform: translateY(-2px);
+    &::before { left: 100%; }
   }
+  
   &:active {
     transform: translateY(0);
     box-shadow: ${props => props.theme.shadows.small};

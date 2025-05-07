@@ -12,7 +12,7 @@ export const MainColumnWrapper = styled.div`
   @media (min-width: 768px) { /* Apply desktop styles */
     margin: 40px auto; /* Restore margin for desktop */
     background-color: ${props => props.theme.colors.gray100}; /* Restore background for desktop */
-    border-radius: 16px; /* Restore border-radius for desktop */
+    border-radius: 32px; /* Restore border-radius for desktop */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1); /* Restore shadow for desktop */
     border: 1px solid rgba(0, 0, 0, 0.03); /* Restore border for desktop */
   }

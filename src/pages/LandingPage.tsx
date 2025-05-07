@@ -22,10 +22,8 @@ const LandingPage = (): JSX.Element => {
         {/* Solutions section */}
         <SectionContainer $bgColor="white">
           <ContentContainer>
-            <SectionTitle>Guiar a las familias</SectionTitle>
-            <SectionDescription>
-              Nos comprometemos con ustedes para encontrar lo mejor para su situación personal
-            </SectionDescription>
+            <SectionTitle>Acompañar a las familias</SectionTitle>
+
             <SolutionsList solutions={solutionsData} />
           </ContentContainer>
         </SectionContainer>
@@ -79,7 +77,7 @@ const SectionTitle = styled.h2`
   font-size: 2.4rem; /* Increased for emphasis */
   font-weight: 800; /* Bolder */
   text-align: center;
-  margin-bottom: 25px; /* More spacing */
+  margin-bottom: 0; /* Remove margin below text */
   color: ${props => props.theme.colors.gray800};
   font-family: ${props => props.theme.fonts.primary};
   
@@ -89,7 +87,7 @@ const SectionTitle = styled.h2`
     width: 100px; /* Wider underline */
     height: 4px;  /* Thicker */
     background: linear-gradient(to right, ${props => props.theme.colors.base}, ${props => props.theme.colors.accent});
-    margin: 15px auto 0;
+    margin: 0 auto 30px; /* Remove top margin, add 30px bottom margin */
     border-radius: 2px;
   }
 `;

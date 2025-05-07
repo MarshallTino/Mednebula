@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { ButtonType } from "../../components/Button/ButtonStyled";
 
 export const ContactPageStyled = styled.div`
   min-height: calc(100vh - 200px);
@@ -37,24 +38,45 @@ export const SectionDescription = styled.p`
 export const ContactLinkButton = styled.a`
   display: inline-block;
   padding: 14px 35px;
-  background: ${props => props.theme.colors.base};
-  color: white;
-  border: none;
-  border-radius: ${props => props.theme.borderRadius.medium};
+  font-family: ${props => props.theme.fonts.primary};
   font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: ${props => props.theme.animations.transition};
+  transition: all 0.3s ease;
+  position: relative;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  overflow: hidden;
+  
+  /* Use the DEFAULT button style - solid blue that turns purple on hover */
+  color: ${props => props.theme.colors.mainLight};
+  background-color: ${props => props.theme.colors.base};
+  border: none;
   box-shadow: ${props => props.theme.shadows.small};
-  &:hover {
-    background: ${props => props.theme.colors.accent};
-    box-shadow: ${props => props.theme.shadows.medium};
-    transform: translateY(-2px);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.6s;
   }
+  
+  &:hover {
+    transform: translateY(-3px);
+    background-color: ${props => props.theme.colors.accent};
+    box-shadow: ${props => props.theme.shadows.medium};
+    &::before { left: 100%; }
+  }
+  
   &:active {
-    transform: translateY(0);
+    transform: translateY(1px);
     box-shadow: ${props => props.theme.shadows.small};
   }
 `;

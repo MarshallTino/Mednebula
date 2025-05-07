@@ -50,10 +50,17 @@ export const LandingContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 60vh; // Adjust height as needed
+  padding: 32px 20px 80px 20px; // Reduced top padding, kept bottom padding
   text-align: center;
-  padding: 0 20px;
   position: relative;
   z-index: 2;
+  
+  @media (max-width: 768px) {
+    min-height: 50vh;
+    padding: 30px 15px 60px 15px; // Adjust padding for smaller screens, reduced top
+  }
 `;
 
 // Add Logo styled component

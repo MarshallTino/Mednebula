@@ -15,7 +15,7 @@ export const Services: ServiceStructure[] = [
     imageClassname: "social-media",
     color: "blue",
     description:
-      "Apartado donde las familias con algún familiar con movilidad reducida pueden expresar y compartir tratamientos y sus experiencias. Recibir información sobre tratamientos en España y en el extranjero.",
+      "Red social medica donde las familias pueden compartir experiencias, dudas y consejos sobre la movilidad reducida. ",
     title: "Red Social Médica",
     image:
       "https://cdn.mednebula.com/static/landing/b5Ks6BzkUxOvizdP4HdAvC5gT5GkKg0x0XhLf5WrYxbChPFlHDWMYEWzJPvTPGNf/Cyc7L0umhZSNB8Nt.jpg",

@@ -1,7 +1,7 @@
 import React from "react";
 import ActivitiesServicesList from "../../components/ActivitiesServicesList/ActivitiesServiceslist";
 import { MainColumnWrapper, SectionContainer, ContentContainer } from "../../components/Container/ContainerStyled";
-import ButtonStyled from "../../components/Button/ButtonStyled";
+import ButtonStyled, { ButtonType } from "../../components/Button/ButtonStyled";
 import { ServicesHeroContainer, ServicesListSection } from "./ServicesPageStyled";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
@@ -22,12 +22,9 @@ const ActivitiesServicesPage = () => {
                 familias. Nuestra meta es crear un espacio inclusivo, donde puedan
                 encontrar las actividades, el apoyo y la comunidad que necesitan.
               </p>
-              <ButtonStyled $primary onClick={() => navigate('/contacto')}>CONTÁCTANOS</ButtonStyled>
+              <ButtonStyled $buttonType={ButtonType.GRADIENT} onClick={() => navigate('/contacto')}>CONTÁCTANOS</ButtonStyled>
             </HeroContent>
-            <HeroImageWrapper>
-              <img src="https://cdn.mednebula.com/static/landing/GHlNJCEyymLGYaOvghoC0OZUEmxbiro6foA5TbNAQIKRtwMXM4LIPeanUv8c9AL1/RuPkiBkhvh1ST6yEE3XkQjshEE2HxKCS8TN2esvB7GYAGJU8DLTgrOJ1hPaS4jfS.mp4" 
-                alt="Personas con diversidad funcional realizando actividades" />
-            </HeroImageWrapper>
+         
           </HeroSection>
         </ContentContainer>
       </ServicesHeroContainer>
