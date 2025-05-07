@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { ActivitiesServices } from "../../Data/ActivitesServices";
 import { MainColumnWrapper, SectionContainer, ContentContainer } from "../../components/Container/ContainerStyled";
-import ButtonStyled from "../../components/Button/ButtonStyled";
+import ButtonStyled, { ButtonType } from "../../components/Button/ButtonStyled";
 
 const ServiceDetailPage = () => {
   const { slug } = useParams();
@@ -33,7 +33,7 @@ const ServiceDetailPage = () => {
               <p>
                 {service.detail?.detailDescription || "Descripción no disponible."}
               </p>
-              <ButtonStyled $primary>CONTACTAR</ButtonStyled>
+              <ButtonStyled $buttonType={ButtonType.GRADIENT}>CONTACTAR</ButtonStyled>
             </HeroContent>
           </HeroSection>
         </ContentContainer>

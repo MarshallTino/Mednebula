@@ -11,9 +11,14 @@ export const MemberCardStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 220px; /* Reduced width for better team display */
-  flex: 0 0 auto;
-  margin: 10px;
+  width: 220px; /* Default for desktop */
+  max-width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    width: 100%; /* Take full grid cell width in mobile grid */
+    margin: 0;
+  }
 
   &:hover {
     transform: translateY(-8px);

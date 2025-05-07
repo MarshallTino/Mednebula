@@ -1,6 +1,7 @@
 import BannerStyled from "./BannerStyled";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
+import { ButtonType } from "../Button/ButtonStyled";
 
 export interface BannerProps {
   image: string;
@@ -34,6 +35,7 @@ export const Banner = ({
             text={buttonText}
             disabled={false}
             action={handleClick}
+            buttonType={ButtonType.DEFAULT}
           />
         </div>
       </div>

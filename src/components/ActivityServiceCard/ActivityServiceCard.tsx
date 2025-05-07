@@ -132,21 +132,38 @@ export const ActivitiesServiceCardStyled = styled.div`
     position: absolute;
     bottom: 20px;
     right: 20px;
-    background: linear-gradient(90deg, 
+    background: linear-gradient(135deg, 
       ${props => props.theme.colors.base},
       ${props => props.theme.colors.accent});
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: ${props => props.theme.borderRadius.medium};
+    border-radius: 6px;
     font-weight: 600;
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
-    background-size: 200% auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    
+    /* Add shine animation consistent with ButtonType.GRADIENT style */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      animation: ${shimmerEffect} 1.5s infinite;
+    }
     
     &:hover {
-      animation: ${shimmerEffect} 2s linear infinite;
+      background: linear-gradient(135deg, 
+        ${props => props.theme.colors.accent},
+        ${props => props.theme.colors.base});
+      box-shadow: ${props => props.theme.shadows.medium};
     }
   }
   

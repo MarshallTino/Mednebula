@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
-import { StyledLink } from "../Button/ButtonStyled";
+import { ButtonType } from "../Button/ButtonStyled";
+import ScrollButton from "../Button/ScrollButton";
 import { HeroSection, LandingContainer, Title, Subtitle, Description, ButtonContainer } from "./LandingStyled"; 
 import { useNavigate } from "react-router-dom";
 
@@ -22,15 +23,16 @@ export const Landing = () => {
             action={() => navigate("/servicios")}
             text="EXPLORAR SERVICIOS"
             disabled={false}
+            buttonType={ButtonType.GRADIENT}
           />
-          <StyledLink
-            className="landingpage__button secondary"
+          <ScrollButton
             to="solutionListSection"
             smooth={true}
             duration={500}
+            buttonType={ButtonType.OUTLINE}
           >
             SABER MÁS
-          </StyledLink>
+          </ScrollButton>
         </ButtonContainer>
       </LandingContainer>
     </HeroSection>

@@ -1,6 +1,6 @@
 export const TeamMembers = [
   {
-    name: "Laureano Nomen",
+    name: "Laureano Ivanow",
     role: "CEO",
     image:
       "https://cdn.mednebula.com/static/landing/CnFlgHqxXP2QLnsQsUGbaPQubkjMXdNZN2UfW1cWVsQHV1bPaKbKRC0VrLd4ScUD/ktTF1Lx76IxpJXgj.jpg",
@@ -13,13 +13,13 @@ export const TeamMembers = [
   },
   {
     name: "Àlex Navarro",
-    role: "Desarrollador Fullstack y Ciberseguridad",
+    role: "Desarrollador",
     image:
       "https://cdn.mednebula.com/static/landing/4YduOVWDpl6UNY0rM0Mx5IT2QvTeyGZxk991qafamrPvW1nZz8RspEoRVF37VmSn7/6wjLwJG3s1zMxUWM.jpg",
   },
   {
     name: "Octavi Galli",
-    role: "Asesorador médico",
+    role: "Asesor médico",
     image:
       "https://cdn.mednebula.com/static/landing/f8s5b75V0abfsBqLhLjs78RuBg51fyZXbHLVZbDLR5BVQXNbSxtCl9qZFI2NYfnB/TfORAKbVxxphcYYw.jpg",
   }

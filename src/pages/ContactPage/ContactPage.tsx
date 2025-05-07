@@ -17,7 +17,20 @@ const ContactPage = (): JSX.Element => {
               Nuestro equipo está aquí para ayudarte.
             </SectionDescription>
             
-            <ContactLinkButton href={`mailto:${emailAddress}`}>
+            {/* Botón inteligente para abrir Gmail en escritorio y mailto en móvil */}
+            <ContactLinkButton
+              href="#"
+              onClick={e => {
+                e.preventDefault();
+                const email = emailAddress;
+                const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+                if (isMobile) {
+                  window.location.href = `mailto:${email}`;
+                } else {
+                  window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank', 'noopener noreferrer');
+                }
+              }}
+            >
               Enviar Correo Electrónico
             </ContactLinkButton>
 

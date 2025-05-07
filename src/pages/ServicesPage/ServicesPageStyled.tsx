@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ServicesHeroContainer = styled.div`
-  margin-top: 32px;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   overflow: hidden;
