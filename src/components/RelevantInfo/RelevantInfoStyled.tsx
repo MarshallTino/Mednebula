@@ -12,6 +12,8 @@ const RelevantInfoStyled = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     gap: 30px;
     padding: 0 20px; /* Add horizontal padding to match other sections */
     

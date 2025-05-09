@@ -1,3 +1,4 @@
+import React from 'react';
 import { SolutionItemContainer, IconContainer, Title, Description, AnimatedIcon } from './SolutionItemStyled';
 
 // Export the interface
@@ -8,17 +9,17 @@ export interface SolutionItemProps {
 }
 
 const SolutionItem = ({ image, title, description }: SolutionItemProps) => {
-    return (
-        <SolutionItemContainer>
-            <IconContainer className="icon-container">
-                <AnimatedIcon>
-                    <img src={image} alt={title} />
-                </AnimatedIcon>
-            </IconContainer>
-            <Title>{title}</Title>
-            <Description>{description}</Description>
-        </SolutionItemContainer>
-    );
+  return (
+    <SolutionItemContainer className="solution-item">
+      <IconContainer className="icon-container">
+        <AnimatedIcon>
+          <img src={image} alt={title} />
+        </AnimatedIcon>
+      </IconContainer>
+      <Title>{title}</Title>
+      <Description className="description">{description}</Description>
+    </SolutionItemContainer>
+  );
 };
 
 export default SolutionItem;
