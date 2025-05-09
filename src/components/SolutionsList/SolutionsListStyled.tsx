@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 const SolutionsListStyled = styled.div`
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   .solutions-list__title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -13,7 +15,7 @@ const SolutionsListStyled = styled.div`
     text-align: center;
     color: ${props => props.theme.colors.mainDark};
     position: relative;
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -26,14 +28,27 @@ const SolutionsListStyled = styled.div`
       border-radius: 2px;
     }
   }
-  
+
   .solutions-wrapper {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    margin: 0 auto;
+    padding: 0 20px;
+    grid-template-columns: repeat(2, minmax(280px, 400px));
+    gap: 40px;
     justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding: 0 15px;
+      gap: 30px;
+    }
+  }
+
+  .solution-item {
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
   }
 `;
 

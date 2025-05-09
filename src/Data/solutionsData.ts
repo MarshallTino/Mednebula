@@ -20,4 +20,11 @@ export const solutionsData = [
     description:
       "Comparte tus experiencias, conoce tratamientos y mantente informado sobre avances médicos en España y en el extranjero.",
   },
+  {
+    image:
+      "https://images.pexels.com/photos/3912979/pexels-photo-3912979.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    title: "Tratamientos y Productos",
+    description:
+      "Explora una variedad de tratamientos y productos diseñados para mejorar la calidad de vida de las personas con movilidad reducida.",
+  },
 ];

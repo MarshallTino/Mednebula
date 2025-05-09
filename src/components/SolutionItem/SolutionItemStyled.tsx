@@ -5,8 +5,8 @@ export const SolutionItemContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 280px;
-  margin: 0 15px 30px;
+  width: 100%;
+  margin: 0 auto;
   transition: ${props => props.theme.animations.transition};
   
   &:hover {
@@ -18,15 +18,15 @@ export const SolutionItemContainer = styled.div`
   }
   
   @media (max-width: 768px) {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 `;
 
 export const IconContainer = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: ${props => props.theme.borderRadius.round}; // Perfect circle
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   overflow: hidden;
   box-shadow: ${props => props.theme.shadows.small};
   transition: ${props => props.theme.animations.transition};
