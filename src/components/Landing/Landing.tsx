@@ -28,7 +28,8 @@ export const Landing = () => {
           <ScrollButton
             to="solutionListSection"
             smooth={true}
-            duration={500}
+            duration={800}
+            offset={-80} // Adjust offset to account for fixed header/navbar
             buttonType={ButtonType.OUTLINE}
           >
             SABER MÁS

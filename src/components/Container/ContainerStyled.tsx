@@ -4,17 +4,18 @@ import styled from 'styled-components';
 export const MainColumnWrapper = styled.div`
   width: 100%;
   max-width: 1200px; /* Max width for desktop */
-  margin: 0 auto; /* Center on desktop */
-  background-color: transparent; /* Default transparent background */
+  margin: 24px auto; /* Added vertical margin to create space at top and bottom */
+  background-color: white; /* Changed from gray100 to white */
   overflow: hidden; 
   position: relative;
+  border-radius: 16px; /* Rounded corners for mobile too */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.08); /* Shadow for all devices */
+  border: 1px solid rgba(0, 0, 0, 0.03); /* Border for all devices */
 
   @media (min-width: 768px) { /* Apply desktop styles */
-    margin: 40px auto; /* Restore margin for desktop */
-    background-color: ${props => props.theme.colors.gray100}; /* Restore background for desktop */
-    border-radius: 32px; /* Restore border-radius for desktop */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1); /* Restore shadow for desktop */
-    border: 1px solid rgba(0, 0, 0, 0.03); /* Restore border for desktop */
+    margin: 32px auto; /* Increased vertical margin for desktop */
+    border-radius: 32px; /* Larger border radius for desktop */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1); /* Enhanced shadow for desktop */
   }
 `;
 
@@ -43,7 +44,7 @@ export const ContentContainer = styled.div`
 export const SectionContainer = styled.section<{ $bgColor?: 'white' | 'light' | 'dark' | 'gradient' }>`
   width: 100%;
   max-width: 100%;
-  padding: 40px 0; /* Reduced default padding */
+  padding: 40px 0; /* Default padding for sections that aren't first */
   position: relative;
   overflow: hidden; 
   background: ${props => {
@@ -69,34 +70,33 @@ export const SectionContainer = styled.section<{ $bgColor?: 'white' | 'light' | 
     content: none; /* Hide line */
   }
 
-  /* Remove border-radius adjustments by default */
+  /* Make first section flush with container */
   &:first-child {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding-top: 0; /* Remove padding to make it flush */
+    margin-top: 0; /* Ensure no margin */
   }
   
   &:last-child {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
   }
 
   @media (min-width: 768px) { /* Apply desktop styles */
-    padding: 60px 0; /* Restore desktop padding */
 
     /* Ensure separation line remains removed on desktop */
     &:not(:last-child)::after {
       content: none;
     }
 
-    /* Restore border-radius adjustments for desktop */
+    /* Ensure first section is flush with container on desktop too */
     &:first-child {
-      border-top-left-radius: 16px;
-      border-top-right-radius: 16px;
+      padding-top: 0; /* No padding on desktop either */
     }
     
     &:last-child {
-      border-bottom-left-radius: 16px;
-      border-bottom-right-radius: 16px;
+      padding-bottom: 60px; /* More padding on desktop */
     }
 
     /* Ensure light sections have a background distinct from the wrapper on desktop */

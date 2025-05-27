@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import ActivitiesServicesList from "../../components/ActivitiesServicesList/ActivitiesServiceslist";
 import { MainColumnWrapper, SectionContainer, ContentContainer } from "../../components/Container/ContainerStyled";
 import ButtonStyled, { ButtonType } from "../../components/Button/ButtonStyled";
@@ -8,6 +8,12 @@ import { useNavigate } from "react-router-dom";
 
 const ActivitiesServicesPage = () => {
   const navigate = useNavigate();
+  
+  // Use useLayoutEffect to scroll to top before the page renders
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <MainColumnWrapper>
       {/* Hero Section with custom container */}

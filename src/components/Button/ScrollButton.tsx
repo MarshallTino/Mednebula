@@ -98,6 +98,7 @@ interface ScrollButtonProps {
   to: string;
   smooth?: boolean;
   duration?: number;
+  offset?: number;  // Add offset prop for adjusting scroll position
   className?: string;
   children: React.ReactNode;
 }

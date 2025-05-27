@@ -19,7 +19,6 @@ export const HeroSection = styled.section`
   width: 100%;
   height: 100vh;
   min-height: 500px;
-  max-height: 800px;
   position: relative;
   overflow: hidden;
   display: flex;

@@ -7,7 +7,6 @@ export const ServicesHeroContainer = styled.div`
   background: ${({ theme }) => theme.colors.blueGradient};
 
   @media (max-width: 768px) {
-    margin-top: 16px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }

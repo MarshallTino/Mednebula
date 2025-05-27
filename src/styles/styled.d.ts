@@ -11,6 +11,7 @@ declare module "styled-components" {
       // Main colors
       mainLight: string;
       base: string;
+      baseRGB: string; // RGB values for base color
       mainDark: string;
       
       // Gradients
@@ -18,6 +19,7 @@ declare module "styled-components" {
       
       // Accent colors (purple)
       accent: string;
+      accentRGB: string; // RGB values for accent color
       accentLight: string;
       accentDark: string;
       

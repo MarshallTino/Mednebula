@@ -27,7 +27,10 @@ export enum ButtonType {
   GRADIENT = "gradient",
   
   // White outline button (used on landing page)
-  OUTLINE = "outline"
+  OUTLINE = "outline",
+
+  // Blue outline button (used on light backgrounds)
+  OUTLINE_DARK = "outline-dark"
 }
 
 interface ButtonStyledProps {
@@ -134,6 +137,29 @@ const ButtonStyled = styled.button<ButtonStyledProps>`
     
     &:hover {
       background-color: rgba(255, 255, 255, 0.15);
+      box-shadow: ${theme.shadows.medium};
+      animation: ${hoverUpAnimation} 0.3s forwards;
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+    
+    @media (max-width: 768px) {
+      padding: 10px 25px;
+      font-size: 0.9rem;
+      min-width: 200px;
+    }
+  `}
+  
+  /* OUTLINE DARK BUTTON: Blue Outline (for light backgrounds) */
+  ${({ $buttonType, theme }) => $buttonType === ButtonType.OUTLINE_DARK && css`
+    background-color: transparent;
+    color: ${theme.colors.base};
+    border: 2px solid ${theme.colors.base};
+    
+    &:hover {
+      background-color: rgba(0, 113, 188, 0.08);
       box-shadow: ${theme.shadows.medium};
       animation: ${hoverUpAnimation} 0.3s forwards;
     }
