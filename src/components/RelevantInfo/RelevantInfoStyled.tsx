@@ -39,29 +39,7 @@ const RelevantInfoStyled = styled.div`
     border: 1px solid ${props => props.theme.colors.gray200}; /* Added subtle border */
     position: relative; /* Needed for pseudo-elements */
     
-    /* Top blue gradient line */
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 10%;
-      right: 10%;
-      height: 3px;
-      background: linear-gradient(to right, transparent, ${props => props.theme.colors.base}, transparent);
-      border-radius: 2px;
-    }
-    
-    /* Bottom blue gradient line */
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 10%;
-      right: 10%;
-      height: 3px;
-      background: linear-gradient(to right, transparent, ${props => props.theme.colors.base}, transparent);
-      border-radius: 2px;
-    }
+    /* Removed top and bottom blue gradient lines */
     
     h3 {
       font-size: 1.65rem;
@@ -101,8 +79,8 @@ const RelevantInfoStyled = styled.div`
       font-size: 1.6rem; /* Smaller size */
       font-weight: 800;
       color: ${props => props.theme.colors.base}; /* Using brand color */
-      margin: 10px auto 5px;
-      text-align: center; /* Centered */
+      margin: 10px 0 5px;
+      text-align: left; /* Left-aligned as requested */
     }
 
     .info__video {

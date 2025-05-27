@@ -12,6 +12,7 @@ const theme: DefaultTheme = {
     // Main colors
     mainLight: "#ffffff",
     base: "#0071bc",
+    baseRGB: "0, 113, 188", // RGB values for base color
     mainDark: "#00253d",
     
     // Gradients for consistent backgrounds
@@ -19,6 +20,7 @@ const theme: DefaultTheme = {
     
     // New modern accent color - Purple
     accent: "#6A5ACD", // Slate Blue
+    accentRGB: "106, 90, 205", // RGB values for accent color
     accentLight: "#9D91E7",
     accentDark: "#483D8B",
     

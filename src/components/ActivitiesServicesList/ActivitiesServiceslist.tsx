@@ -5,6 +5,11 @@ import styled from "styled-components";
 
 const ActivitiesServicesList = () => {
   const navigate = useNavigate();
+
+  const handleServiceClick = (slug: string, service: any) => {
+    navigate(`/servicios/${slug}`, { state: { service } });
+  };
+
   return (
     <ServicesGrid>
       {ActivitiesServices.map((service) => (
@@ -14,9 +19,7 @@ const ActivitiesServicesList = () => {
             shortDescription={service.shortDescription}
             description={service.description}
             image={service.image}
-            onClick={() =>
-              navigate(`/servicios/${service.slug}`, { state: { service } })
-            }
+            onClick={() => handleServiceClick(service.slug, service)}
           />
         </ServiceCardWrapper>
       ))}

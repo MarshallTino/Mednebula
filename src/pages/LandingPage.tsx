@@ -19,11 +19,10 @@ const LandingPage = (): JSX.Element => {
       <Landing />
       
       <MainColumnWrapper>
-        {/* Solutions section */}
-        <SectionContainer $bgColor="white">
+        {/* Solutions section - First section with additional top margin */}
+        <SectionContainer $bgColor="white" id="solutionListSection" style={{ marginTop: '40px' }}>
           <ContentContainer>
             <SectionTitle>Acompañar a las familias</SectionTitle>
-
             <SolutionsList solutions={solutionsData} />
           </ContentContainer>
         </SectionContainer>
